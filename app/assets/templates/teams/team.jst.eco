@@ -1,0 +1,2 @@
+<p class='team_name'><%= @team.get('name') %></p>
+<input class='delete_btn' data-id='<%= @team.get('id') %>' type='submit' value='Delete'>

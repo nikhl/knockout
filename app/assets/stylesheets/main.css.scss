@@ -1,0 +1,17 @@
+$border-color: #6666aa;
+$border-radius: 6px;
+@mixin round-borders($thickness) {
+  border: $thickness solid $border-color;
+  border-radius: $border-radius;
+}
+@mixin font-styles {
+  font-family: $verdana;
+  padding: 6px;
+}
+
+#place-holder {
+  h1 {
+    @include font-styles;
+    padding: 5px;
+  }
+}

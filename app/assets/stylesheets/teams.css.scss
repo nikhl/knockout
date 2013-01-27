@@ -1,0 +1,46 @@
+.team {
+  @include round-borders(1px);
+  @include font-styles;
+  &:hover { background-color: #cae3ef; }
+  @include transition(all, 2.0s, ease-in-out);
+  margin: 3px;
+  margin-bottom: 5px;
+}
+
+#new_team_label {
+  float: left;
+  padding: 5px;
+  font-size: 20px;
+  margin-top: 6px;
+  margin-left: -5px;
+}
+
+#new_team_name {
+  margin-top: 8px;
+  width: 570px;
+}
+
+#new_team_form {
+  @include round-borders(0px);
+  padding: 5px;
+}
+
+#new_team_button {
+  margin-top: -5px;
+  margin-left: 10px;
+  @include button(simple, #549f60);
+  font-size: 15px;
+}
+
+#teams_header {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.delete_btn {
+  float: right;
+  @include button(simple, #b9090b);
+  margin-top: -32px;
+  padding: 5px;
+}

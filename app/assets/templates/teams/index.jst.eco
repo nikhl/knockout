@@ -1,0 +1,13 @@
+<h2>Teams page</h2>
+
+<form id='new_team_form'>
+<p id='new_team_label'>
+  Enter new Team name</label>
+</p>
+<input type='text' id='new_team_name'>
+<input class= 'btn' type='submit' id='new_team_button' value='Create'>
+</form>
+<p id='teams_header'>
+Teams are
+</p>
+<div id='teams'></div>
