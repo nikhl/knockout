@@ -41,6 +41,25 @@
 .delete_btn {
   float: right;
   @include button(simple, #b9090b);
-  margin-top: -32px;
+  margin-top: -7px;
+}
+
+.knockout_btn {
+  @include button(simple, #5fa5e5);
   padding: 5px;
+  font-size: 14px;
+  margin: 5px;
+}
+
+.team_name {
+  padding: 5px;
+}
+
+.inner_team {
+  padding: 9px;
+}
+
+.eliminated {
+  font-weight: bold;
+  color: #b9090b;
 }

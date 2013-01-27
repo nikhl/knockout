@@ -13,7 +13,7 @@ class TeamsController < ApplicationController
   end
   
   def update
-    respond_with Team.update(params[:id], params[:entry])
+    respond_with Team.update(params[:id], params[:team])
   end
   
   def destroy

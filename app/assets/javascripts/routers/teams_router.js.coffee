@@ -8,7 +8,7 @@ class Knockout.Routers.Teams extends Backbone.Router
     @collection.fetch()
 
   index: ->
-    view = new Knockout.Views.TeamsIndex(collection: @collection)
+    view = new Knockout.Views.TeamsIndex({ collection: @collection, name: 'nikhil' })
     $('#place-holder').html(view.render().el)
 
   show: (id) ->

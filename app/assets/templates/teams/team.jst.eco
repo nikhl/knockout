@@ -1,2 +1,9 @@
-<p class='team_name'><%= @team.get('name') %></p>
+<div class='inner_team'>
+<span class='team_name'><%= @team.get('name') %></span>
+<% if @team.get('eliminated') : %>
+<span class='eliminated'>(Eliminated)</span>
+<% end %>
+<span>
 <input class='delete_btn' data-id='<%= @team.get('id') %>' type='submit' value='Delete'>
+</span>
+</div>

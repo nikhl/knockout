@@ -1,12 +1,13 @@
 class Knockout.Views.TeamsIndex extends Backbone.View
 
-  teamViews = {}
+  _teamViews = {}
 
   template: JST['teams/index']
   
   events:
     'submit #new_team_form': 'createTeam'
     'click .delete_btn': 'deleteTeam'
+    'click .knockout_btn': 'knockoutTeam'
   
   initialize: ->
     @collection.on('reset', @render, this)
@@ -28,11 +29,11 @@ class Knockout.Views.TeamsIndex extends Backbone.View
 
   appendTeam: (team) ->
     view = new Knockout.Views.Team(model: team)
-    teamViews[team.get('id')] = view
+    _teamViews[team.get('id')] = view
     $('#teams').append(view.render().el)
 
   removeTeam: (team) ->
-    teamViews[team.get('id')].remove()
+    _teamViews[team.get('id')].remove()
 
   displayError: (team, response) ->
     if response.status == 422
@@ -43,3 +44,6 @@ class Knockout.Views.TeamsIndex extends Backbone.View
   deleteTeam: (event) ->
     team = @collection.get($(event.currentTarget).data('id'))
     team.destroy()
+
+  knockoutTeam: (event) ->
+    alert "In knockout"

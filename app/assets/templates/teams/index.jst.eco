@@ -11,3 +11,5 @@
 Teams are
 </p>
 <div id='teams'></div>
+
+<input class='knockout_btn' type='submit' value='Knock one out'>
