@@ -25,3 +25,7 @@ gem 'jquery-rails'
 gem 'backbone-on-rails'
 
 gem 'bourbon'
+
+group :production do
+  gem 'pg'
+end
