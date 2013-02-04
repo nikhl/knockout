@@ -21,7 +21,7 @@ class Knockout.Views.TeamsIndex extends Backbone.View
 
   createTeam: (event) ->
     event.preventDefault()
-    attrs = name: $('#new_team_name').val(), eliminated: false
+    attrs = name: $('#new_team_name').val()
     @collection.create attrs,
       wait: true
       success: -> $('#new_team_name')[0].value = ""

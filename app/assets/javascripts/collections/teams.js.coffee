@@ -5,16 +5,14 @@ class Knockout.Collections.Teams extends Backbone.Collection
   url: '/api/teams'
   
   knockoutOne: ->
-    #knockedOutTeam = @shuffle()[0]
-    remainingTeams = @where({eliminated: false})
-    if remainingTeams.length == 0
-      alert "All teams have been knockedout"
-      return false
+    remainingTeams = @where({eliminated: null})
+    if remainingTeams.length == 2
+      remainingTeams[0].eliminate()
+      remainingTeams[1].win()
     else
       knockedOutTeam = fisherYates(remainingTeams)[0]
       if knockedOutTeam
-        knockedOutTeam.set(eliminated: true)
-        knockedOutTeam.save()
+        knockedOutTeam.eliminate()
 
   # Randomizes the order of elements in the passed in array in place.
   fisherYates = (arr) ->

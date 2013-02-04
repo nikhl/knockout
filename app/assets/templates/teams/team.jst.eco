@@ -1,8 +1,11 @@
 <div class='inner_team'>
   <div class='team_details'>
     <span class='team_name'><%= @team.get('name') %></span>
-    <% if @team.get('eliminated'): %>
+    <% if (@team.get('eliminated') == true): %>
       <span class='eliminated'>(Eliminated)</span>
+    <% end %>
+    <% if (@team.get('eliminated') == false): %>
+      <span class='winner'>(Winner)</span>
     <% end %>
   </div>
   <span class="delete">
