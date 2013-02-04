@@ -41,7 +41,7 @@
 .delete_btn {
   float: right;
   @include button(simple, #b9090b);
-  margin-top: -7px;
+  margin-top: -27px;
 }
 
 .knockout_btn {
@@ -62,4 +62,6 @@
 .eliminated {
   font-weight: bold;
   color: #b9090b;
+  float: right;
+  margin-right: 100px;
 }

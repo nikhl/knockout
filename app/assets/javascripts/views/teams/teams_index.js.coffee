@@ -21,7 +21,7 @@ class Knockout.Views.TeamsIndex extends Backbone.View
 
   createTeam: (event) ->
     event.preventDefault()
-    attrs = name: $('#new_team_name').val()
+    attrs = name: $('#new_team_name').val(), eliminated: false
     @collection.create attrs,
       wait: true
       success: -> $('#new_team_name')[0].value = ""
@@ -46,4 +46,5 @@ class Knockout.Views.TeamsIndex extends Backbone.View
     team.destroy()
 
   knockoutTeam: (event) ->
-    alert "In knockout"
+    event.preventDefault()
+    @collection.knockoutOne()
