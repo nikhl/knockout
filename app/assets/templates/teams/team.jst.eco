@@ -1,3 +1,4 @@
+<a href='#<%= @team.get('id') %>' data-toggle="modal">
 <div class='inner_team'>
   <div class='team_details'>
     <span class='team_name'><%= @team.get('name') %></span>
@@ -11,4 +12,17 @@
   <span class="delete">
     <input class='delete_btn' data-id='<%= @team.get('id') %>' type='submit' value='Delete'>
   </span>
+</div>
+</a>
+<div id='<%= @team.get('id') %>' class='modal hide fade' role='dialog' aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3>Team Name</h3>
+  </div>
+  <div class="modal-body">
+    <p><%= @team.get('name') %></p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
 </div>
